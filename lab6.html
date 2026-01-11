@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f4f4f4;padding-top:50px;}
+input,select,button{padding:8px;margin:5px;width:200px;}
+button{background:blue;color:white;border:none;}
+</style>
+</head>
+
+<body>
+
+<h2>Simple Calculator</h2>
+
+<input id="n1" type="number" placeholder="First number"><br>
+<input id="n2" type="number" placeholder="Second number"><br>
+
+<select id="op">
+<option value="+">Sum</option>
+<option value="-">Difference</option>
+<option value="*">Product</option>
+<option value="/">Quotient</option>
+<option value="%">Remainder</option>
+<option value="p">Power</option>
+<option value="s">Square</option>
+<option value="r">Square Root</option>
+</select><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let a=Number(n1.value), b=Number(n2.value), o=op.value, r;
+
+if(o=="+") r=a+b;
+else if(o=="-") r=a-b;
+else if(o=="*") r=a*b;
+else if(o=="/") r=a/b;
+else if(o=="%") r=a%b;
+else if(o=="p") r=Math.pow(a,b);
+else if(o=="s") r=a*a;
+else if(o=="r") r=Math.sqrt(a);
+
+res.innerHTML="Result: "+r;
+}
+</script>
+
+</body>
+</html>
