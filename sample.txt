@@ -1,0 +1,7 @@
+This is the sample text file loaded using AJAX.
+
+You successfully loaded this text using both:
+• Vanilla JavaScript (XMLHttpRequest)
+• jQuery AJAX
+
+Great job testing AJAX functionality!
